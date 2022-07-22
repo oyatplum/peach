@@ -6,16 +6,40 @@
     </title>
     <meta charset = "utf-8">
     <link rel="stylesheet" href="style.css">
+    <script>
+        function setColor(color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                console.log(alist[i]);
+                alist[i].style.color = color;
+                i = i + 1;
+        }
+        }
+        function BodySetColor(color){
+            document.querySelector('body').style.backgroundColor = color;
+        }
+        function dark_bright_handler(self){
+            var target = document.querySelector('body');
+        if(self.value === 'dark'){
+            BodySetColor('rgb(218, 132, 128)');
+            self.value = 'bright';
+            setColor('black');
+            }
+        else{
+            BodySetColor('rgb(237, 172, 169)');
+            self.value = 'dark';
+            setColor('white');
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1><a href = "peach.html">Isn't it a peach🍑?</a></h1>
-    <input type = "button" value = "dark" onclick = "
-        document.querySelector('body').style.backgroundColor = 'rgb(218, 132, 128)';
+    <input type = "button" value = "dark" onclick= "
+        dark_bright_handler(this);
         ">
-    <input type = "button" value = "bright" onclick = "
-         document.querySelector('body').style.backgroundColor = 'rgb(237, 172, 169)';
-         ">
     <div id="grid">
     <ul>
         <Li><a href ="bieber peach.html">Bieber peach</a></Li>
