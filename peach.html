@@ -6,32 +6,7 @@
     </title>
     <meta charset = "utf-8">
     <link rel="stylesheet" href="style.css">
-    <script>
-        function setColor(color){
-            var alist = document.querySelectorAll('a');
-            var i = 0;
-            while(i < alist.length){
-                console.log(alist[i]);
-                alist[i].style.color = color;
-                i = i + 1;
-        }
-        }
-        function BodySetColor(color){
-            document.querySelector('body').style.backgroundColor = color;
-        }
-        function dark_bright_handler(self){
-            var target = document.querySelector('body');
-        if(self.value === 'dark'){
-            BodySetColor('rgb(218, 132, 128)');
-            self.value = 'bright';
-            setColor('black');
-            }
-        else{
-            BodySetColor('rgb(237, 172, 169)');
-            self.value = 'dark';
-            setColor('white');
-            }
-        }
+    <script src = "colors.js">
     </script>
 </head>
 
